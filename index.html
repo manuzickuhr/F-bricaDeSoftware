@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualização de Reservas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 id="logo"><a href="index.html"> NOME</a></h1>
+            <i class="fa-solid fa-bars menu-aberto"></i>
+            <div class="menu-container">
+                <i class="fa-solid fa-xmark menu-fechar"></i>
+                <ul class="menu">
+                    <li class="opções submenu-ramo"><a href="#" data-toggle="submenu">Reservas<i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li class="submenu-item"><a href="#">Visualização Diária</a></li>
+                            <li class="submenu-item"><a href="#">Visualização Semanal</a></li>
+                        </ul>
+                    </li>
+                    <li class="opções"><a href="#">Minhas Reservas</a></li>
+                    <li class="opções"><a href="#">Histórico</a></li>
+                    <li class="opções"><a href="#" id="login-btn">Fazer Login</a></li>
+                </ul>
+        </nav>
+    </header>
+        <main>
+            <div class="controle">
+
+                <div class="filtros">
+                    <label><input type="checkbox" checked id="manha"> Manhã</label>
+                    <label><input type="checkbox" checked id="tarde"> Tarde</label>
+                    <label><input type="checkbox" checked id="noite"> Noite</label>
+                </div>
+
+                <div class="controle-data">
+                    <h2> Visualização Diária</h2>
+                    <div class="data-container">
+                        <button id="dia-anterior"> <i class="fa-solid fa-less-than"></i></button>
+                        <span id="dia-atual"></span>
+                        <button id="dia-proximo"><i class="fa-solid fa-greater-than"></i></button>
+                    </div>
+                </div>
+
+                <span><a href="#">Visualização Semanal</a></span>
+                
+            </div>
+
+            <div id="reserva-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Horário</th>
+                            <th>A04</th>
+                            <th>A05</th>
+                            <th>D04</th>
+                            <th>D05</th>
+                            <th>D06</th>
+                            <th>D07</th>
+                        </tr>
+                    </thead>
+                    <tbody id="reserva-body"></tbody>
+                </table>
+            </div>    
+    
+
+        </main>
+    
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-modal">&times;</span>
+            <h2>Login</h2>
+            <input type="text" placeholder="Usuário" id="username"><br><br>
+            <input type="password" placeholder="Senha" id="password"><br><br>
+            <button id="login-submit">Entrar</button>
+        </div>
+    </div>
+
+    
+    <script src="main.js"></script>
+</body>
+</html>
