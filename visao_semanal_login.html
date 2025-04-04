@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualização de Reservas</title>
+    <link rel="stylesheet" href="menu_login.css">
+    <link rel="stylesheet" href="styles_visao_semanal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 id="logo"><a href="index.html"> NOME</a></h1>
+            <i class="fa-solid fa-bars menu-aberto"></i>
+            <div class="menu-container">
+                <i class="fa-solid fa-xmark menu-fechar"></i>
+                <ul class="menu">
+                    <li class="opções submenu-ramo"><a href="#" data-toggle="submenu">Reservas<i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li class="submenu-item"><a href="#">Visualização Diária</a></li>
+                            <li class="submenu-item"><a href="#">Visualização Semanal</a></li>
+                        </ul>
+                    </li>
+                    <li class="opções"><a href="#">Minhas Reservas</a></li>
+                    <li class="opções"><a href="#">Histórico</a></li>
+
+                    <!-- Dropdown de professor -->
+                    <li class="opções submenu-ramo">
+                        <a href="#" class="dropdown__profile" id="dropdown">
+                            <div class="dropdown__names">
+                                <h3>Fulano de Tal</h3>
+                                <span>Professor</span>
+                            </div>
+                            <div class="dropdown__image">
+                                <img src="perfil.png" alt="Imagem do professor">
+                            </div>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li class="submenu-item"><a href="#"> <i class="fa-solid fa-gear"></i> Configurações</a></li>
+                            <li class="submenu-item"><a href="#"> <i class="fa-solid fa-right-from-bracket"></i> Sair</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        <div class="controle-data">
+            <h2> Visualização Semanal</h2>
+            <div class="data-container">
+                <button id="semana-anterior"> <i class="fa-solid fa-less-than"></i></button>
+                <span id="semana-atual"></span>
+                <button id="semana-proximo"><i class="fa-solid fa-greater-than"></i></button>
+            </div>
+        </div>
+
+        <span><a href="index_login.html">Visualização Diária</a></span>
+
+        <div id="reserva-container">
+            <table>
+                <tr>
+                    <th>Horário</th>
+                    <th colspan="6">Seg</th>
+                    <th colspan="6">Ter</th>
+                    <th colspan="6">Qua</th>
+                    <th colspan="6">Qui</th>
+                    <th colspan="6">Sex</th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>A01</th><th>A02</th><th>A03</th><th>A04</th><th>A05</th><th>A06</th>
+                    <th>A01</th><th>A02</th><th>A03</th><th>A04</th><th>A05</th><th>A06</th>
+                    <th>A01</th><th>A02</th><th>A03</th><th>A04</th><th>A05</th><th>A06</th>
+                    <th>A01</th><th>A02</th><th>A03</th><th>A04</th><th>A05</th><th>A06</th>
+                    <th>A01</th><th>A02</th><th>A03</th><th>A04</th><th>A05</th><th>A06</th>
+                </tr>
+            
+                <!-- Linhas com os horários -->
+                <tr><td>08:00h</td><td colspan="42"></td></tr>
+                <tr><td>09:00h</td><td colspan="42"></td></tr>
+                <tr><td>10:00h</td><td colspan="42"></td></tr>
+                <tr><td>11:00h</td><td colspan="42"></td></tr>
+                <tr><td>12:00h</td><td colspan="42"></td></tr>
+                <tr><td>13:00h</td><td colspan="42"></td></tr>
+                <tr><td>14:00h</td><td colspan="42"></td></tr>
+                <tr><td>15:00h</td><td colspan="42"></td></tr>
+                <tr><td>16:00h</td><td colspan="42"></td></tr>
+                <tr><td>17:00h</td><td colspan="42"></td></tr>
+                <tr><td>18:00h</td><td colspan="42"></td></tr>
+                <tr><td>19:00h</td><td colspan="42"></td></tr>
+                <tr><td>20:00h</td><td colspan="42"></td></tr>
+                <tr><td>21:00h</td><td colspan="42"></td></tr>
+                <tr><td>22:00h</td><td colspan="42"></td></tr>
+                <tr><td>23:00h</td><td colspan="42"></td></tr>
+            
+            </table>
+            
+            
+            
+        </div>
+
+    </main>
+    <script src="menu_login.js"></script>
+    <script>
+        
+    </script>
+</body>
+</html>

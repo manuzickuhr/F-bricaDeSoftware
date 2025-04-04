@@ -1,0 +1,79 @@
+table {
+    width: 90%; /* Reduzi a largura para 90% da tela */
+    max-width: 900px; /* Limita o tamanho máximo */
+    border-collapse: collapse;
+    margin: auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(185, 185, 185, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 8px; /* Reduzi o espaçamento interno */
+    font-size: 14px; /* Diminui o tamanho do texto */
+}
+
+th {
+    background-color: #0073e6;
+    color: white;
+    font-weight: bold;
+}
+
+td:first-child, th:first-child {
+    font-weight: bold;
+    text-align: left;
+    font-size: 15px; /* Mantém os horários um pouco maiores */
+}
+
+.controle {
+    display: flex; /* Define que os itens dentro de .controle vão usar flexbox */
+    justify-content: space-between; /* Distribui o espaço disponível entre os itens */
+    align-items: center; /* Alinha verticalmente os itens no centro */
+    padding: 20px;
+    flex-wrap: wrap; /* Faz com que os itens que não cabem na linha atual vão para a linha seguinte */
+    gap: 20px; /* Espaçamento entre os itens */
+    margin: 50px;
+}
+
+.filtros {
+    display: flex; /* Usando flexbox para alinhar os filtros */
+    gap: 15px; /* Espaçamento entre os filtros */
+    align-items: center; /* Alinha os itens no centro verticalmente */
+}
+
+.controle-data {
+    display: flex;
+    flex-direction: column; /* Coloca o título e a data em uma coluna */
+    align-items: center;
+    gap: 8px;
+}
+
+.controle-data .data-container {
+    display: flex; /* Coloca a data e os botões na mesma linha */
+    align-items: center; /* Alinha verticalmente */
+    gap: 10px; /* Espaço entre a data e os botões */
+}
+
+.controle span {
+    align-self: center; 
+}
+
+.controle a{
+    color: #0073e6;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    .controle {
+        flex-direction: column; /* Quando a tela for pequena, empilha os itens verticalmente */
+        align-items: flex-start; /* Alinha à esquerda quando em coluna */
+    }
+
+    .filtros, .controle-data {
+        width: 100%; /* Faz os filtros e a data ocuparem toda a largura disponível */
+        justify-content: flex-start; /* Alinha os itens à esquerda */
+    }
+}

@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Rubik", sans-serif;
+    max-width: 100%;
+}
+
+body {
+    width: 100vw;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    padding: 0 3rem;
+}
+
+#logo {
+    width: 120px;
+    padding: 1rem 0;   
+}
+
+#logo a {
+    text-decoration: none;
+    color: #2d57d9;
+}
+
+.menu-container {
+    padding: 16px 0;
+}
+
+.menu {
+    list-style: none;
+}
+
+.menu .opções {
+    display: inline-block;
+    margin: 0 24px;
+    position: relative;
+}
+
+.menu .opções a {
+    text-decoration: none;
+    display: flex;
+    padding: 16px 0;
+    color: #777;
+    font-weight: 500;
+    transition: 0.3s ease;
+    align-items: center;
+}
+
+.menu .opções:hover a {
+    color: #2d57d9;
+}
+
+.opções a .fa-chevron-down {
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    margin-left: 8px;
+    transition: 0.3s ease;
+    pointer-events: none;
+}
+
+.opções:hover a .fa-chevron-down {
+    transform: rotate(-180deg);
+}
+
+.menu .opções .submenu {
+    max-width: max-content;
+    width: 200px;
+    position: absolute;
+    top: 80%;
+    left: -16px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #2d57d9;
+    transform: translateY(0);
+    transition: .3s ease;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.menu .opções:hover .submenu {
+    transform: translate(8px);
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu .opções .submenu .submenu-item {
+    list-style: none;
+}
+
+.menu .opções .submenu .submenu-item a {
+    text-decoration: none;
+    display: block;
+    color: #c3c3c397;
+    font-weight: 500;
+    transition: 0.3s ease;
+    padding: 16px;
+}
+
+.menu .opções .submenu .submenu-item a:hover {
+    color: #ffffff;
+    background-color: #2d57d927;
+}
+
+nav .menu-aberto {
+    display: none;
+    font-size: 24px;
+    color: #2d57d9;
+}
+
+nav .menu-fechar {
+    display: none;
+    font-size: 24px;
+    color: #fff;
+}
+
+@media (max-width: 992px) {
+    body {
+        max-width: 992px;
+        overflow: hidden;
+    }
+
+    .menu {
+        padding: 0 3rem;
+    }
+
+    nav .menu-container {
+        position: absolute;
+        right: -400px;
+        visibility: hidden;
+        width: 400px;
+        height: 100%;
+        top: 0;
+        overflow-y: auto;
+        background-color: #2d57d9;
+        z-index: 999;
+        padding: 15px;
+        transition: all 0.3s ease-in;
+    }
+
+    nav .menu-container.abrir {
+        visibility: visible;
+        transition: all 0.3s ease-out;
+        right: 0;
+    }
+
+    .menu-container .menu .opções {
+        display: block;
+        margin: 0;
+    }
+
+    .menu-container .menu .opções a {
+        color: #fff;
+        padding: 24px 16px;
+        border-bottom: 1px solid #ffffff20;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .submenu-item:hover a .fa-chevron-down {
+        transform: rotate(0);
+    }
+
+    .menu-container .menu .opções .submenu-ramo.ativo a .fa-chevron-down {
+        transform: rotate(-180deg);
+    }
+
+    .menu .opções .submenu {
+        width: 100%;
+        position: relative;
+        opacity: 1;
+        visibility: visible;
+        border-radius: 0;
+        border-bottom: 1px solid #ffffff20;
+        background-color: transparent;
+        transform: translateY(0px);
+        box-shadow: none;
+        padding: 0px;
+        left: auto;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .menu .opções:hover .submenu {
+        transform: translateY(0px);
+    }
+
+    .menu .opções .submenu .submenu-item a {
+        color: #ffffff21;
+        border: none;
+    }
+
+    .menu .opções .submenu .submenu-item a:hover {
+        color: #fff;
+    }
+
+    .logo {
+        padding: 1.5rem 0;
+    }
+
+    nav .menu-aberto {
+        cursor: pointer;
+        display: block;
+    }
+
+    nav .menu-fechar {
+        display: block;
+        padding: 16px;
+        cursor: pointer;
+        width: fit-content;
+    }
+}
+
+.dropdown__image img {
+    width: 40px;  /* Tamanho pequeno */
+    height: 40px; /* Tamanho pequeno */
+    border-radius: 50%; /* Faz a imagem ficar redonda */
+    object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
+}
