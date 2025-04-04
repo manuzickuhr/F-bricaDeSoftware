@@ -123,14 +123,14 @@ document.addEventListener("DOMContentLoaded", function () {
             row.appendChild(horarioCell);
 
             // Preenche os laboratórios na linha
-            // Preenche os laboratórios na linha
             laboratorios.forEach(() => {
                 const cell = document.createElement("td");
             
                 const link = document.createElement("a");
                 link.href = "reservar.html";
-                link.textContent = "Reservar";
-                link.style.opacity = "0";
+                link.textContent = "+";
+                link.style.textDecoration = "none";
+                link.style.opacity = "100";
             
                 cell.appendChild(link);
                 row.appendChild(cell);
