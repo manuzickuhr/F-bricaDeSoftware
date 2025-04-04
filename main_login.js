@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-/**/
+/*
 
 // Seleciona os elementos necessários
 const modal = document.getElementById('modalReserva');
@@ -225,3 +225,4 @@ reservaBody.addEventListener('click', function(event) {
         abrirModal(elementoClicado);
     }
 });
+*/
