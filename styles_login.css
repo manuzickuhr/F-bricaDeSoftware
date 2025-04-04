@@ -348,7 +348,7 @@ td.horario-principal {
     object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
 }
 
-/* Estilo do Modal */
+/* Estilo do Modal 
 .modal {
     display: none;
     position: fixed;
@@ -357,7 +357,7 @@ td.horario-principal {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Fundo transparente */
+    background-color: rgba(0, 0, 0, 0.4); /* Fundo transparente 
     padding-top: 60px;
 }
 
@@ -384,7 +384,7 @@ td.horario-principal {
     cursor: pointer;
 }
 
-/* Estilizando os inputs */
+/* Estilizando os inputs 
 input[type="time"] {
     width: 100%;
     padding: 8px;
@@ -400,7 +400,7 @@ label {
     display: inline-block;
 }
 
-/* Estilizando o botão de confirmação */
+/* Estilizando o botão de confirmação 
 .btn-confirmar {
     padding: 12px 25px;
     font-size: 16px;
@@ -415,3 +415,4 @@ label {
 .btn-confirmar:hover {
     background-color: #45a049;
 }
+*/
