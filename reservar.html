@@ -1,67 +1,110 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles_reserva.css" />
-    <title>Fazer_Reserva</title>
-  </head>
-  <body>
-    <main>
-      <div id="modalReserva" class="modal">
-        <div class="modal-content">
-          <h2>Reserva</h2>
-          <br />
-          <p>Selecione o seu horário:</p>
-          <br />
-          <!-- Campos de input para horário de início e término -->
-          <label for="horario-inicio">Horário de Início:</label>
-          <input
-            type="time"
-            id="horario-inicio"
-            name="horario-inicio"
-            required
-          />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles_reserva.css" />
+  <title>Fazer Reserva</title>
+</head>
+<body>
+  <main>
+    <div id="modalReserva" class="modal">
+      <div class="modal-content">
+        <button class="close-btn" id="closeModal">×</button>
 
-          <label for="horario-termino">Horário de Término:</label>
-          <input
-            type="time"
-            id="horario-termino"
-            name="horario-termino"
-            required
-          />
-          <br /><br />
+        <h2>Reserva</h2>
+        <br />
 
-          <p>Selecione o seu laboratório:</p>
-          <label for="laboratório">laboratório:</label>
-          <select id="laboratório">
-            <option value="D06">Sala D06</option>
-            <option value="D07">Sala D07</option>
-            <option value="D05">Sala D05</option>
-          </select>
-          <br /><br />
+        <p>Selecione o seu horário:</p>
+        <br />
 
-          <label for="curso">Curso</label>
-          <select id="curso" name="curso">
-            <option value="Ciencia">Ciência da Computação</option>
-            <option value="Pedagogia">Pedagogia</option>
-            <option value="Eletrica">Engenharia Elétrica</option>
-            <option value="Medio">Ensino Médio</option>
-          </select>
-          <br /><br />
+        <label for="horario-inicio">Horário de Início:</label>
+        <input type="time" id="horario-inicio" name="horario-inicio" required />
 
-          <label for="turma">Turma/Discente:</label>
-          <input type="text" id="turma" name="turma" autocomplete="off" />
-          <div id="turma-list" class="autocomplete-list"></div>
-          <br /><br />
+        <label for="horario-termino">Horário de Término:</label>
+        <input type="time" id="horario-termino" name="horario-termino" required />
+        <br /><br />
 
-          <!-- Botão de confirmação -->
-          <button id="confirmarReserva" class="btn-confirmar">
-            <a href="index_login.html">Confirmar</a>
-          </button>
-        </div>
+        <p>Selecione o seu laboratório:</p>
+        <label for="laboratório">Laboratório:</label>
+        <select id="laboratório">
+          <option value="A04">Sala A04</option>
+          <option value="A05">Sala A05</option>
+          <option value="D04">Sala D04</option>
+          <option value="D05">Sala D05</option>
+          <option value="D06">Sala D06</option>
+          <option value="D07">Sala D07</option>
+        </select>
+        <br /><br />
+
+        <label for="curso">Curso</label>
+        <select id="curso" name="curso">
+          <option value="Ciencia">Ciência da Computação</option>
+          <option value="Eletrica">Engenharia Elétrica</option>
+          <option value="Medio">Ensino Médio</option>
+          <option value="Pedagogia">Pedagogia</option>
+        </select>
+        <br /><br />
+
+        <label for="turma">Turma/Discente:</label>
+        <input type="text" id="turma" name="turma" autocomplete="off" />
+        <div id="turma-list" class="autocomplete-list"></div>
+        <br /><br />
+
+        <button id="confirmarReserva" class="btn-confirmar">
+          <a href="index_login.html">Confirmar</a>
+        </button>
       </div>
-    </main>
+    </div>
+  </main>
 
-  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const turmaInput = document.getElementById("turma");
+      const turmaList = document.getElementById("turma-list");
+      const closeModal = document.getElementById("closeModal");
+
+      const turmas = [
+        "Desenvolvimento de Projeto I - Pizzini",
+        "Desevolvimento de Projeto II - Uriarte",
+        "Web Design - Shirlei",
+        "Programação II - Edwin"
+      ];
+
+      // Autocomplete
+      turmaInput.addEventListener("input", function () {
+        const query = turmaInput.value.toLowerCase();
+        turmaList.innerHTML = "";
+        turmaList.style.display = "none";
+
+        if (query) {
+          const filtered = turmas.filter(turma => turma.toLowerCase().includes(query));
+
+          if (filtered.length > 0) {
+            turmaList.style.display = "block";
+          }
+
+          filtered.forEach(turma => {
+            const div = document.createElement("div");
+            div.classList.add("autocomplete-item");
+            div.textContent = turma;
+            div.onclick = function () {
+              turmaInput.value = turma;
+              turmaList.innerHTML = "";
+              turmaList.style.display = "none";
+            };
+            turmaList.appendChild(div);
+          });
+        }
+      });
+
+      // Fechar modal
+      // Redireciona ao fechar o modal
+closeModal.addEventListener("click", () => {
+  window.location.href = "index_login.html";
+});
+
+    });
+  </script>
+</body>
 </html>
