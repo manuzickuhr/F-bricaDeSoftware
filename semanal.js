@@ -1,74 +1,42 @@
 
-document.querySelectorAll("table tr").forEach(tr => {
-    const tds = tr.querySelectorAll("td");
-
-    tds.forEach((td, index) => {
-      // Ignora a primeira coluna (Horário)
-      if (index === 0) return;
-
-      // Evita adicionar se já tiver link
-      if (td.querySelector("a")) return;
-
-      // Cria o link com o símbolo "+"
-      const link = document.createElement("a");
-      link.href = "reservar.html";
-      link.textContent = "+";
-      link.style.cssText = `
-        text-decoration: none;
-        color: black;
-        font-size: 10x;
-        opacity: 0;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      `;
-
-      td.style.position = "relative";
-      td.appendChild(link);
-    });
-  });
+const $ = q => document.querySelector(q)
 
 
-  function atualizarSemana(baseDate) {
-    let diaSemana = baseDate.getDay();
-    const novaData = new Date(baseDate);
+const reserva =(inicio, duracao_min, dia, lab) => {return {inicio: inicio, duracao: duracao_min, dia: dia, lab: lab }}
+const tempo = (horas, minutos) => horas + minutos/60
 
-    // Se for sábado (6) ou domingo (0), pula para a próxima segunda
-    if (diaSemana === 6) {
-      novaData.setDate(novaData.getDate() + 2);
-      diaSemana = 1;
-    } else if (diaSemana === 0) {
-      novaData.setDate(novaData.getDate() + 1);
-      diaSemana = 1;
-    }
+const reservas = [
+   reserva(tempo(9,00), 1*60, "seg", "A04")
+  ,reserva(tempo(8,00), 60, "seg", "D05")
+  ,reserva(tempo(9,30), 90, "seg", "D05")
+  ,reserva(tempo(9,30), 90, "ter", "D05")
+  ,reserva(tempo(11,30), 30, "qui", "D06")
+]
 
-    const inicioSemana = new Date(novaData);
-    inicioSemana.setDate(novaData.getDate() - (diaSemana - 1)); // segunda
+function inserir_reserva(reserva) {
+  
+  const inicio = 8
+  const fim = 12
 
-    const fimSemana = new Date(inicioSemana);
-    fimSemana.setDate(inicioSemana.getDate() + 4); // sexta
+  const dia = reserva.dia
+  const lab = reserva.lab
+  const container = $(`.reserva-container .${dia} .${lab}`)
 
-    const opcoes = { day: '2-digit', month: '2-digit', year: 'numeric' };
-    const texto = `Semana: ${inicioSemana.toLocaleDateString('pt-BR', opcoes)} a ${fimSemana.toLocaleDateString('pt-BR', opcoes)}`;
 
-    document.getElementById('info-semana').textContent = texto;
+  const minute_measure = container.offsetHeight / ((fim-inicio) * 60)
+  const offset = (reserva.inicio - inicio)*60
+  const size = reserva.duracao
+  console.log(container.offsetHeight)
+  const html = `
+    <div class="reserva" style="grid-row: ${offset + 1 + 1} / span ${size};">
+    </div
+  `
 
-    return inicioSemana;
-  }
+    container.innerHTML += html
 
-  // Variável global com a data base
-  let dataBase = new Date();
-  dataBase = atualizarSemana(dataBase); // mostra a semana correta ao iniciar
 
-  // Botão anterior
-  document.getElementById('semana-anterior').addEventListener('click', () => {
-    dataBase.setDate(dataBase.getDate() - 7);
-    atualizarSemana(dataBase);
-  });
+}
 
-  // Botão próximo
-  document.getElementById('semana-proximo').addEventListener('click', () => {
-    dataBase.setDate(dataBase.getDate() + 7);
-    atualizarSemana(dataBase);
-  });
+for (let rev of reservas) {
+  inserir_reserva(rev)
+}
