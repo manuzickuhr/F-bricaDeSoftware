@@ -47,7 +47,8 @@ body {
 }
 
 .controle a{
-    color: #0073e6;
+    color: #085730;
+    text-decoration: none;
 }
 
 /* Ajustes para telas menores */
@@ -83,7 +84,7 @@ body {
 
 /* Estilo do cabeçalho */
 #reserva-container th {
-    background-color: #0073e6;
+    background-color: #085730;
     color: white;
     font-weight: bold;
     padding: 12px;
@@ -110,7 +111,7 @@ td.horario-principal {
 /* Destaca o horário atual */
 .horario-atual {
     /*background-color: #5d646b;*/
-    color: #0073e6 !important;
+    color: #085730 !important;
     font-weight: bold; 
 }
 
