@@ -18,11 +18,11 @@
                     <li class="opções submenu-ramo"><a href="#" data-toggle="submenu">Reservas<i class="fa-solid fa-chevron-down"></i></a>
                         <ul class="submenu">
                             <li class="submenu-item"><a href="#">Visualização Diária</a></li>
-                            <li class="submenu-item"><a href="#">Visualização Semanal</a></li>
+                            <li class="submenu-item" id="visao-semanal-link"><a href="#">Visualização Semanal</a></li>
                         </ul>
                     </li>
-                    <li class="opções"><a href="#">Minhas Reservas</a></li>
-                    <li class="opções"><a href="#">Histórico</a></li>
+                    <li class="opções" id="minhas-reservas"><a href="#">Minhas Reservas</a></li>
+                    <li class="opções" id="historico"><a href="#">Histórico</a></li>
                     <li class="opções"><a href="#" id="login-btn">Fazer Login</a></li>
                 </ul>
         </nav>
@@ -45,7 +45,7 @@
                     </div>
                 </div>
 
-                <span><a href="#">Visualização Semanal</a></span>
+                <span><a href="#" id="visao-semanal">Visualização Semanal</a></span>
                 
             </div>
 
@@ -69,17 +69,76 @@
 
         </main>
     
-    <div id="login-modal" class="modal">
-        <div class="modal-content">
-            <span class="close" id="close-modal">&times;</span>
-            <h2>Login</h2>
-            <input type="text" placeholder="Usuário" id="username"><br><br>
-            <input type="password" placeholder="Senha" id="password"><br><br>
-            <button id="login-submit"> <a href="index_login.html">Entrar</a></button>
-        </div>
-    </div>
+        <div id="login-modal" class="modal">
+            <div class="modal-content">
+              <span class="close" id="close-modal">&times;</span>
+              <h2>Login</h2>
+              <input type="text" placeholder="Usuário" id="username"><br><br>
+              <input type="password" placeholder="Senha" id="password"><br><br>
+          
+              <button id="login-submit">
+                <a href="index_login.html">Entrar</a>
+              </button>
+          
+              <div class="login-link">
+                <a href="cadastro.html">Não possui login? Cadastre-se!</a>
+              </div>
+            </div>
+          </div>
+
+          <footer>
+            <div id="footer_content">
+                <div id="footer_contacts">
+                    <h1>Fábrica de Software</h1>
+                    <p>IFC - Campus Blumenau</p>
+    
+                    <div id="footer_social_media">
+                        <a href="#" class="footer-link" id="instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
 
     
+                        <a href="#" class="footer-link" id="whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <ul class="footer-list">
+                    <li>
+                        <h3>Links Rápidos</h3>
+                    </li>
+                    <li>
+                        <a href="cadastro.html" class="footer-link">Cadastre-se</a>
+                    </li>
+                    <li>
+                        <a href="index_sem_login.html" class="footer-link">Visualização diária</a>
+                    </li>
+                    <li>
+                        <a href="cadastro.html" class="footer-link">Visualização semanal</a>
+                    </li>
+                </ul>
+    
+                <ul class="footer-list">
+                    <li>
+                        <h3>Encontre-nos</h3>
+                    </li>
+                    <li>
+                        <p >Email: <a href="mailto:@gmail.com">email.bla.bla@gmail.com</a></p>
+                    </li>
+                    <li>
+                        <p >R. Bernardino José de Oliveira n°81 - IFC Blumenau</p>
+                    </li>
+                </ul>
+    
+            </div>
+    
+            <div id="footer_copyright">
+                &#169
+                2025 all rights reserved
+            </div>
+        </footer>
+          
     <script src="main_sem_login.js"></script>
 </body>
 </html>
