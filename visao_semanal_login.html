@@ -11,7 +11,7 @@
 <body>
     <header>
         <nav>
-            <h1 id="logo"><a href="index.html"> NOME</a></h1>
+            <h1 id="logo"><a href="index_login.html"> NOME</a></h1>
             <i class="fa-solid fa-bars menu-aberto"></i>
             <div class="menu-container">
                 <i class="fa-solid fa-xmark menu-fechar"></i>
@@ -47,65 +47,116 @@
         </nav>
     </header>
     <main>
-
+        <div class="controle">
         <div class="controle-data">
             <h2> Visualização Semanal</h2>
             <div class="data-container">
                 <button id="semana-anterior"> <i class="fa-solid fa-less-than"></i></button>
-                <span id="semana-atual"></span>
+                <span id="info-semana"></span>
                 <button id="semana-proximo"><i class="fa-solid fa-greater-than"></i></button>
             </div>
         </div>
-
         <span><a href="index_login.html">Visualização Diária</a></span>
+    </div>
+    
 
-        <div id="reserva-container">
+        <div class="reserva-container">
             <table>
-                <tr>
-                    <th>Horário</th>
-                    <th colspan="6">Seg</th>
-                    <th colspan="6">Ter</th>
-                    <th colspan="6">Qua</th>
-                    <th colspan="6">Qui</th>
-                    <th colspan="6">Sex</th>
-                </tr>
-                <tr>
-                    <th></th>
-                    <th>A01</th><th>A02</th><th>A03</th><th>A04</th><th>A05</th><th>A06</th>
-                    <th>A01</th><th>A02</th><th>A03</th><th>A04</th><th>A05</th><th>A06</th>
-                    <th>A01</th><th>A02</th><th>A03</th><th>A04</th><th>A05</th><th>A06</th>
-                    <th>A01</th><th>A02</th><th>A03</th><th>A04</th><th>A05</th><th>A06</th>
-                    <th>A01</th><th>A02</th><th>A03</th><th>A04</th><th>A05</th><th>A06</th>
-                </tr>
-            
-                <!-- Linhas com os horários -->
-                <tr><td>08:00h</td><td colspan="42"></td></tr>
-                <tr><td>09:00h</td><td colspan="42"></td></tr>
-                <tr><td>10:00h</td><td colspan="42"></td></tr>
-                <tr><td>11:00h</td><td colspan="42"></td></tr>
-                <tr><td>12:00h</td><td colspan="42"></td></tr>
-                <tr><td>13:00h</td><td colspan="42"></td></tr>
-                <tr><td>14:00h</td><td colspan="42"></td></tr>
-                <tr><td>15:00h</td><td colspan="42"></td></tr>
-                <tr><td>16:00h</td><td colspan="42"></td></tr>
-                <tr><td>17:00h</td><td colspan="42"></td></tr>
-                <tr><td>18:00h</td><td colspan="42"></td></tr>
-                <tr><td>19:00h</td><td colspan="42"></td></tr>
-                <tr><td>20:00h</td><td colspan="42"></td></tr>
-                <tr><td>21:00h</td><td colspan="42"></td></tr>
-                <tr><td>22:00h</td><td colspan="42"></td></tr>
-                <tr><td>23:00h</td><td colspan="42"></td></tr>
-            
+              <tr>
+                <th>Horário</th>
+                <th colspan="6">Seg</th>
+                <th colspan="6">Ter</th>
+                <th colspan="6">Qua</th>
+                <th colspan="6">Qui</th>
+                <th colspan="6">Sex</th>
+              </tr>
+              <tr>
+                <th></th>
+                <th>A01</th><th>A02</th><th>A03</th><th>A04</th><th>A05</th><th>A06</th>
+                <th>A01</th><th>A02</th><th>A03</th><th>A04</th><th>A05</th><th>A06</th>
+                <th>A01</th><th>A02</th><th>A03</th><th>A04</th><th>A05</th><th>A06</th>
+                <th>A01</th><th>A02</th><th>A03</th><th>A04</th><th>A05</th><th>A06</th>
+                <th>A01</th><th>A02</th><th>A03</th><th>A04</th><th>A05</th><th>A06</th>
+              </tr>
+          
+             
+              <tr><td>08:00h</td><td class="reservado" data-text=" (8h às 8h45) 101 - Web Desing: Shirlei"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr><td>09:00h</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="reservado" data-text=" (9h45 às 10h30) 102 - Lógica de Programação: Rodacki"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr><td>10:00h</td><td></td><td></td><td></td><td class="reservado" data-text="(10h15 às 11h) 202 - Banco de Dados: Hermano"></td><td></td><td></td><td></td><td></td><td></td><td class="reservado" data-text=" (9h45 às 10h30) 102 - Lógica de Programação: Rodacki (10h30 às 11h) 302 - Programação 2: Edwin" ></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr><td>11:00h</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr><td>12:00h</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr><td>13:00h</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr><td>14:00h</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr><td>15:00h</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr><td>16:00h</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr><td>17:00h</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr><td>18:00h</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr><td>19:00h</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr><td>20:00h</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr><td>21:00h</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr><td>22:00h</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr><td>23:00h</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
             </table>
-            
-            
-            
-        </div>
+          </div>
+          
 
     </main>
+
+    <footer>
+        <div id="footer_content">
+            <div id="footer_contacts">
+                <h1>Fábrica de Software</h1>
+                <p>IFC - Campus Blumenau</p>
+
+                <div id="footer_social_media">
+                    <a href="#" class="footer-link" id="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+
+                    <a href="#" class="footer-link" id="whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <ul class="footer-list">
+                <li>
+                    <h3>Links Rápidos</h3>
+                </li>
+                <li>
+                    <a href="index_login.html" class="footer-link">Visualização Diária</a>
+                </li>
+                <li>
+                    <a href="visao_semanal_login.html" class="footer-link">Visualização semanal</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Minhas reservas</a>
+                </li>
+            </ul>
+
+            <ul class="footer-list">
+                <li>
+                    <h3>Encontre-nos</h3>
+                </li>
+                <li>
+                    <p >Email: <a href="mailto:@gmail.com">email.bla.bla@gmail.com</a></p>
+                </li>
+                <li>
+                    <p >R. Bernardino José de Oliveira n°81 - IFC Blumenau</p>
+                </li>
+            </ul>
+
+        </div>
+
+        <div id="footer_copyright">
+            &#169
+            2025 all rights reserved
+        </div>
+    </footer>
+
     <script src="menu_login.js"></script>
-    <script>
-        
-    </script>
+    <script src="semanal.js"></script>
+      
 </body>
 </html>
