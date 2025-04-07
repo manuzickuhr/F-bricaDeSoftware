@@ -7,6 +7,8 @@
     scroll-behavior: smooth;
     font-family: "Rubik", sans-serif;
     max-width: 100%;
+    box-sizing: border-box;
+    letter-spacing: 1px;
 }
 
 body {
@@ -29,7 +31,7 @@ nav {
 
 #logo a{
     text-decoration: none;
-    color: #2d57d9;
+    color: #085730;
 
 }
 
@@ -58,7 +60,7 @@ nav {
 }
 
 .menu .opções:hover a{
-    color: #2d57d9;
+    color: #085730;
 }
 
 .opções a .fa-chevron-down {
@@ -82,7 +84,7 @@ nav {
     left: -16px;
     border-radius: 10px;
     overflow: hidden;
-    background-color: #2d57d9;
+    background-color: #085730;
     transform: translateY(0);
     transition: .3s ease;
     visibility: hidden;
@@ -117,7 +119,7 @@ nav {
 nav .menu-aberto {
     display: none;
     font-size: 24px;
-    color: #2d57d9;
+    color: #085730;
 }
 
 nav .menu-fechar{
@@ -142,7 +144,7 @@ nav .menu-fechar{
         height: 100%;
         top: 0;
         overflow-y: auto;
-        background-color: #2d57d9;
+        background-color: #085730;
         z-index: 999;
         padding: 15px;
         transition: all 0.3s ease-in;
@@ -252,7 +254,7 @@ nav .menu-fechar{
 }
 
 .controle a{
-    color: #0073e6;
+    color: #085730;
 }
 
 /* Ajustes para telas menores */
@@ -288,7 +290,7 @@ nav .menu-fechar{
 
 /* Estilo do cabeçalho */
 #reserva-container th {
-    background-color: #0073e6;
+    background-color: #085730;
     color: white;
     font-weight: bold;
     padding: 12px;
@@ -315,7 +317,7 @@ td.horario-principal {
 /* Destaca o horário atual */
 .horario-atual {
     /*background-color: #5d646b;*/
-    color: #0073e6 !important;
+    color: #085730 !important;
     font-weight: bold; 
 }
 
@@ -385,7 +387,7 @@ td.horario-principal {
 
 /* Estilo do botão de envio */
 #login-submit {
-    background-color: #0073e6;
+    background-color: #085730;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -393,7 +395,123 @@ td.horario-principal {
     cursor: pointer;
     font-size: 16px;
 }
+#login-submit a:visited{
+    color: white;
+}
 
 #login-submit:hover {
-    background-color: #005bb5;  /* Muda a cor quando o botão é pressionado */
+    background-color: #085730;  /* Muda a cor quando o botão é pressionado */
+}
+
+.login-link {
+    margin-top: 15px;
+    display: block;
+}
+
+.login-link a {
+    color: #085730;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/*EStilização do Footer */
+
+footer {
+    width: 100%;
+    color: #f5f5f5;
+    height: auto;
+    margin-top: 100px;
+}
+
+
+.footer-link {
+    text-decoration: none;
+}
+
+#footer_content {
+    background-color: #085730;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 3rem 3.5rem;
+    
+}
+
+#footer_contacts h1 {
+    margin-bottom: 0.75rem;
+}
+
+
+#footer_social_media {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+} 
+
+#footer_social_media .footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: #f5f5f5;
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+#footer_social_media .footer-link i {
+    font-size: 1.25rem;    
+}
+
+#footer_social_media .footer-link:hover {
+    opacity: 0.8;
+}
+
+#instagram {
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+#whatsapp {
+    background-color: #25d366;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+}
+
+.footer-list .footer-link , .footer-list p{
+    color: #a8a29e;
+    transition: all 0.4s;
+}
+
+.footer-list .footer-link:hover {
+    color: white;
+}
+
+#footer_copyright {
+    display: flex;
+    justify-content: center;
+    background-color: #04321b;
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100;
+}
+
+@media screen and (max-width: 768px) {
+    #footer_content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    #footer_content {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 3rem 2rem;
+    }
 }
